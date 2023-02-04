@@ -1,15 +1,20 @@
 /// <reference types="cypress" />
 
+/* 
+- Navegar até́ a seção “Pra Você̂”; 
+- Clicar no botão “Onde usar meu cartão VR”; 
+- Validar que o mapa do Google abriu em tela. 
+*/
+
 describe('Onde Usar Meu VR', () => {
   beforeEach(() => {
-    cy.visit('https://www.vr.com.br/')
-    cy.title().should('be.equal', 'VR Benefícios - Vale Refeição, Vale Alimentação e Transporte')
-    cy.get('button[class="vr-menu-trigger vr-menu-trigger--open"]').click()
+    cy.acesso_VR_site()
+    cy.botao_menu().click()
   })
 
   it('Validar Mapa do Google', () => {
-    cy.get(':nth-child(3) > .vr-main-navigation__link').click()
-    cy.get('.vr-hero__actions > .vr-button--negative').click()
-    cy.get('div[aria-roledescription="mapa"]').should('be.extensible')
+    cy.pra_voce().click()
+    cy.onde_usar().click()
+    cy.mapa_google().should('be.extensible')
   })
 })

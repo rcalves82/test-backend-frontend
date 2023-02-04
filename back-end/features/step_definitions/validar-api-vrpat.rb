@@ -1,6 +1,6 @@
 Dado('o endereço da API de produtos da VR') do
-    @teste = HttParty.get('https://portal.vr.com.br/api-web/comum/enumerations/VRPAT')
-    puts @teste
+    response = HTTParty.get('http://portal.vr.com.br/api-web/comum/enumerations/VRPAT')
+    puts response.code
 end
   
 Quando('realizo uma requisição de consulta') do
