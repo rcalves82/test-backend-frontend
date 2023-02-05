@@ -1,12 +1,11 @@
+# frozen_string_literal: true
 Dado('o endereço da API de produtos da VR') do
-    response = HTTParty.get('http://portal.vr.com.br/api-web/comum/enumerations/VRPAT')
-    puts response.code
+    @get_produtos = HTTParty.get 'https://portal.vr.com.br/api-web/comum/enumerations/VRPAT'
+
 end
   
-Quando('realizo uma requisição de consulta') do
-    
-end
-  
-Então('a API irá retornar informações referentes a produtos') do
-    
+Então('a API irá retornar informações referentes a produtos e estabelecimentos') do
+    puts "typeOfEstablishment : #{@get_produtos["typeOfEstablishment"]}"
+    expect(@get_produtos.code).to eq 200
+    expect(@get_produtos.message).to eq("OK")
 end
