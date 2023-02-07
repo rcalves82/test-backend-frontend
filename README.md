@@ -1,2 +1,2 @@
 # test-backend-frontend
-Esse projeto contempla testes de Backend com Ruby + HTTParty + Cucumber e testes de Frontend com Cypress + JS.
+Esse projeto contempla teste de Backend com Ruby + HTTParty + Cucumber e teste de Frontend com Cypress + JS.
