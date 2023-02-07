@@ -1,4 +1,4 @@
-## Este projeto contempla: 
+### Este projeto contempla: 
 * Teste de Back-End com Ruby, HTTParty e Cucumber
 * Teste de Front-End com Javascript e Cypress.
 
