@@ -1,4 +1,4 @@
-* Esse projeto contempla teste de Back-End com Ruby + HTTParty + Cucumber e teste de Front-End com Cypress + Javascript.
+* Este projeto contempla teste de Back-End com Ruby + HTTParty + Cucumber e teste de Front-End com Cypress + Javascript.
 
 ### Rodando o projeto localmente ###
 
